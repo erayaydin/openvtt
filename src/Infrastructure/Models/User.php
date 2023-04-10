@@ -3,6 +3,7 @@
 namespace OpenVTT\Infrastructure\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * User model
@@ -21,5 +22,13 @@ use Carbon\Carbon;
  */
 class User extends Model
 {
-
+    /**
+     * Retrieve characters of the user.
+     *
+     * @return HasMany characters of the user
+     */
+    public function characters(): HasMany
+    {
+        return $this->hasMany(Character::class);
+    }
 }
