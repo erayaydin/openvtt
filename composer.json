@@ -11,6 +11,11 @@
     "require-dev": {
         "laravel/sail": "^1.18"
     },
+    "autoload": {
+        "psr-4": {
+            "OpenVTT\\": "src/"
+        }
+    },
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
